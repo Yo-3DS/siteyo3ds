@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{document.documentElement.setAttribute("data-theme", localStorage.getItem("theme")||"light");}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home - Yo-3DS Site</title>
+<link rel="preload" href="assets/fonts/titres.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/base.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/sous-textes.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/boutons.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img class="brand-icon" src="assets/images/brand/icon.png" alt="">
+      Yo-3DS Site
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="https://discord.gg/3X2cwpBuct" target="_blank" rel="noopener">Contact</a></li>
+    </ul>
+    <details class="lang-switch">
+      <summary><img class="flag" src="assets/images/flags/en.png" alt="">English</summary>
+      <ul class="lang-menu">
+        <li><a class="active" href="index.html"><img class="flag" src="assets/images/flags/en.png" alt="">English</a></li>
+        <li><a href="fr/index.html"><img class="flag" src="assets/images/flags/fr.png" alt="">Français</a></li>
+      </ul>
+    </details>
+    <button class="theme-toggle" type="button">Dark Mode</button>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="grid-template-columns: 1fr;">
+    <div>
+      <h1>Hi, I'm Yo-3DS!</h1>
+      <p>
+        I'm a great YO-KAI WATCH fan, and a great french localizations fan! I such
+        like these that I decided to create some myself, especially for games that
+        would never get one.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="projects.html">See my projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="a-propos">
+    <!-- section "à propos" retirée pour l'instant -->
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <small>© 2026 — Yo-3DS Site</small>
+  </div>
+</footer>
+
+<script src="assets/theme.js" defer></script>
+</body>
+</html>

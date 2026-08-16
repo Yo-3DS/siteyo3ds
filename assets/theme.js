@@ -2,8 +2,13 @@
   const btn = document.querySelector('.theme-toggle');
   if (!btn) return;
 
+  const isFrench = document.documentElement.lang === 'fr';
+  const labels = isFrench
+    ? { light: 'Mode sombre', dark: 'Mode clair' }
+    : { light: 'Dark Mode', dark: 'Light Mode' };
+
   function label(theme) {
-    return theme === 'dark' ? 'Mode clair' : 'Mode sombre';
+    return theme === 'dark' ? labels.dark : labels.light;
   }
 
   function apply(theme) {

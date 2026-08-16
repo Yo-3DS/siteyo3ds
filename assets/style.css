@@ -5,22 +5,22 @@
 @font-face {
   font-family: 'YW Titres';
   src: url('fonts/titres.otf') format('opentype');
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: 'YW Base';
   src: url('fonts/base.otf') format('opentype');
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: 'YW Sous-textes';
   src: url('fonts/sous-textes.otf') format('opentype');
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: 'YW Boutons';
   src: url('fonts/boutons.otf') format('opentype');
-  font-display: swap;
+  font-display: block;
 }
 
 :root {
@@ -195,6 +195,78 @@ a:focus-visible, button:focus-visible {
   transition: border-color 0.18s ease, color 0.18s ease;
 }
 .theme-toggle:hover { border-color: var(--primary); color: var(--primary); }
+
+.lang-switch {
+  position: relative;
+  margin-left: 10px;
+}
+
+.lang-switch summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'YW Sous-textes', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--bg-soft);
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  list-style: none;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: 2px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.18s ease;
+}
+.lang-switch[open] summary::after { transform: rotate(-135deg); }
+.lang-switch summary:hover { border-color: var(--primary); color: var(--primary); }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 160px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--surface);
+  border: 1.5px solid var(--bg-soft);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+  z-index: 20;
+}
+
+.lang-menu li + li { margin-top: 2px; }
+
+.lang-menu a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+.lang-menu a:hover { background: var(--bg-soft); }
+.lang-menu a.active { background: var(--primary); color: #fff; }
+
+.lang-switch .flag {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
