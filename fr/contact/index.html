@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<script>try{document.documentElement.setAttribute("data-theme", localStorage.getItem("theme")||"light");}catch(e){}</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Contact ‑ Site de Yo‑3DS</title>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Site de Yo‑3DS"/>
+<meta property="og:title" content="Contact"/>
+<meta property="og:description" content="Contactez Yo‑3DS."/>
+<meta property="og:url" content="https://yo-3ds.github.io/siteyo3ds/fr/contact/"/>
+<meta property="og:image" content="https://yo-3ds.github.io/siteyo3ds/assets/images/brand/favicon.png"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="canonical" href="https://yo-3ds.github.io/siteyo3ds/fr/contact/"/>
+<meta name="description" content="Contactez Yo‑3DS."/>
+<link href="../../assets/images/brand/favicon.png?v=1" rel="icon" type="image/png"/>
+<link as="font" crossorigin="" href="../../assets/fonts/titres.otf?v=2" rel="preload" type="font/otf"/>
+<link as="font" crossorigin="" href="../../assets/fonts/base.otf?v=2" rel="preload" type="font/otf"/>
+<link as="font" crossorigin="" href="../../assets/fonts/sous-textes.otf?v=2" rel="preload" type="font/otf"/>
+<link as="font" crossorigin="" href="../../assets/fonts/boutons.otf?v=2" rel="preload" type="font/otf"/>
+<link href="../../assets/style.css?v=6" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="../">
+<img alt="" class="brand-icon" src="../../assets/images/brand/icon.png"/>
+<span class="brand-name">Site de <span class="brand-yo">Yo‑</span><span class="brand-3ds">3DS</span></span>
+</a>
+<ul class="nav-links">
+<li><a href="../">Accueil</a></li>
+<li><a href="../projets/">Projets</a></li>
+<li><a aria-current="page" href="./">Me contacter</a></li>
+</ul>
+<details class="lang-switch">
+<summary><img alt="" class="flag" src="../../assets/images/flags/fr.png"/>Français</summary>
+<ul class="lang-menu">
+<li><a href="../../contact/"><img alt="" class="flag" src="../../assets/images/flags/en.png"/>English</a></li>
+<li><a class="active" href="./"><img alt="" class="flag" src="../../assets/images/flags/fr.png"/>Français</a></li>
+</ul>
+</details>
+<button class="theme-toggle" type="button">Thème sombre</button>
+<button aria-pressed="false" class="music-toggle" title="Flower Man (sung by Yo-3DS)" type="button"><span aria-hidden="true" class="music-icon"></span><span class="music-label">Musique</span></button>
+<audio id="site-audio" loop="" preload="none">
+<source src="../../assets/audio/flower-man.mp3?v=1" type="audio/mpeg"/>
+<source src="../../assets/audio/flower-man.ogg?v=1" type="audio/ogg"/>
+</audio>
+</nav>
+</header>
+<main class="wrap">
+<section style="padding-top:48px;">
+<h1>Me contacter</h1>
+<p>
+      Une question, une suggestion, ou envie d'aider sur l'un de mes projets
+      de traduction ? Remplissez le formulaire ci‑dessous, je vous répondrai dès que possible.
+    </p>
+</section>
+<section class="project-body" style="padding-top:0; grid-template-columns:1fr;">
+<div>
+<p>
+        Pour me contacter, merci de compléter les informations ci‑contre.
+        Lorsque vous me contactez, soyez <strong>clair.e</strong>, <strong>direct.e</strong>
+        et <strong>n'omettez aucune information</strong> potentiellement importante dans votre cas.
+      </p>
+<form class="contact-form" id="contact-form" novalidate="">
+<div class="form-field">
+<label for="cf-name">Votre prénom / pseudo</label>
+<input id="cf-name" name="name" required="" type="text"/>
+</div>
+<div class="form-field">
+<label for="cf-contact">Email ou votre pseudo Discord unique (le @pseudo, pas le pseudo d'affichage), pour que je puisse vous répondre</label>
+<input id="cf-contact" name="contact" placeholder="@pseudo" required="" type="text"/>
+</div>
+<div class="form-field">
+<label for="cf-message">Message</label>
+<textarea id="cf-message" maxlength="1024" name="message" required="" rows="7"></textarea>
+</div>
+<div aria-hidden="true" class="form-field form-field-hp">
+<label for="cf-website">Site web</label>
+<input autocomplete="off" id="cf-website" name="website" tabindex="-1" type="text"/>
+</div>
+<button class="btn btn-primary" type="submit">Envoyer le message</button>
+<p aria-live="polite" class="form-status" id="form-status" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-row">
+<small>© 2026 — Site de <span class="brand-yo">Yo‑</span><span class="brand-3ds">3DS</span></small>
+</div>
+</footer>
+<script defer="" src="../../assets/theme.js?v=2"></script>
+<script defer="" src="../../assets/music.js?v=2"></script>
+<script defer="" src="../../assets/contact.js?v=4"></script>
+</body>
+</html>
