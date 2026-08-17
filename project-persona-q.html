@@ -4,12 +4,13 @@
 <script>try{document.documentElement.setAttribute("data-theme", localStorage.getItem("theme")||"light");}catch(e){}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Persona Q - Yo-3DS Site</title>
-<link rel="preload" href="assets/fonts/titres.otf?v=1" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="assets/fonts/base.otf?v=1" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="assets/fonts/sous-textes.otf?v=1" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="assets/fonts/boutons.otf?v=1" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=1">
+<title>Persona Q - Yo-3DS Website</title>
+<link rel="icon" type="image/png" href="assets/images/brand/favicon.png?v=1">
+<link rel="preload" href="assets/fonts/titres.otf?v=2" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/base.otf?v=2" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/sous-textes.otf?v=2" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/boutons.otf?v=2" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=6">
 </head>
 <body>
 
@@ -17,12 +18,12 @@
   <nav class="nav">
     <a class="brand" href="index.html">
       <img class="brand-icon" src="assets/images/brand/icon.png" alt="">
-      Yo-3DS Site
+      <span class="brand-name"><span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span> Website</span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html" aria-current="page">Projects</a></li>
-      <li><a href="https://discordapp.com/users/1132771221604421682" target="_blank" rel="noopener">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <details class="lang-switch">
       <summary><img class="flag" src="assets/images/flags/en.png" alt="">English</summary>
@@ -32,6 +33,11 @@
       </ul>
     </details>
     <button class="theme-toggle" type="button">Dark Mode</button>
+    <button class="music-toggle" type="button" aria-pressed="false" title="Flower Man (sung by Yo-3DS)"><span class="music-icon" aria-hidden="true"></span><span class="music-label">Music</span></button>
+    <audio id="site-audio" loop preload="none">
+      <source src="assets/audio/flower-man.mp3?v=1" type="audio/mpeg">
+      <source src="assets/audio/flower-man.ogg?v=1" type="audio/ogg">
+    </audio>
   </nav>
 </header>
 
@@ -119,11 +125,12 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <small>© 2026 — Yo-3DS Site</small>
+    <small>© 2026 — <span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span> Website</small>
   </div>
 </footer>
 
-<script src="assets/gallery.js?v=1" defer></script>
-<script src="assets/theme.js?v=1" defer></script>
+<script src="assets/gallery.js?v=2" defer></script>
+<script src="assets/theme.js?v=2" defer></script>
+<script src="assets/music.js?v=2" defer></script>
 </body>
 </html>

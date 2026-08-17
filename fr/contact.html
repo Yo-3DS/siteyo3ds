@@ -4,7 +4,7 @@
 <script>try{document.documentElement.setAttribute("data-theme", localStorage.getItem("theme")||"light");}catch(e){}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Accueil - Site de Yo-3DS</title>
+<title>Contact - Site de Yo-3DS</title>
 <link rel="icon" type="image/png" href="../assets/images/brand/favicon.png?v=1">
 <link rel="preload" href="../assets/fonts/titres.otf?v=2" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="../assets/fonts/base.otf?v=2" as="font" type="font/otf" crossorigin>
@@ -21,15 +21,15 @@
       <span class="brand-name">Site de <span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" aria-current="page">Accueil</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="projets.html">Projets</a></li>
-      <li><a href="contact.html">Me contacter</a></li>
+      <li><a href="contact.html" aria-current="page">Me contacter</a></li>
     </ul>
     <details class="lang-switch">
       <summary><img class="flag" src="../assets/images/flags/fr.png" alt="">Français</summary>
       <ul class="lang-menu">
-        <li><a href="../index.html"><img class="flag" src="../assets/images/flags/en.png" alt="">English</a></li>
-        <li><a class="active" href="index.html"><img class="flag" src="../assets/images/flags/fr.png" alt="">Français</a></li>
+        <li><a href="../contact.html"><img class="flag" src="../assets/images/flags/en.png" alt="">English</a></li>
+        <li><a class="active" href="contact.html"><img class="flag" src="../assets/images/flags/fr.png" alt="">Français</a></li>
       </ul>
     </details>
     <button class="theme-toggle" type="button">Mode sombre</button>
@@ -43,23 +43,43 @@
 
 <main class="wrap">
 
-  <section class="hero" style="grid-template-columns: 1fr;">
-    <div>
-      <h1>Salut, moi c'est Yo-3DS !</h1>
-      <p>
-        Je suis un grand fan de YO-KAI WATCH, et aussi de localisations en
-        tout genre ! J'aime tellement les localisations que j'ai décidé
-        d'en créer moi-même, notamment pour des jeux qui d'après moi
-        pourraient ne jamais en recevoir.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="projets.html">Voir mes projets</a>
-      </div>
-    </div>
+  <section style="padding-top:48px;">
+    <h1>Me contacter</h1>
+    <p>
+      Une question, une suggestion, ou envie d'aider sur l'un de mes projets
+      de traduction ? Remplissez le formulaire ci-dessous, je vous répondrai dès que possible.
+    </p>
   </section>
 
-  <section id="a-propos">
-    <!-- section "à propos" retirée pour l'instant -->
+  <section class="project-body" style="padding-top:0; grid-template-columns:1fr;">
+    <div>
+      <p>
+        Pour me contacter, merci de compléter les informations ci-contre.
+        Lorsque vous me contactez, soyez <strong>clair.e</strong>, <strong>direct.e</strong>
+        et <strong>n'omettez aucune information</strong> potentiellement importante dans votre cas.
+      </p>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="cf-name">Votre prénom / pseudo</label>
+          <input type="text" id="cf-name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-contact">Email ou votre pseudo Discord unique (le @pseudo, pas le pseudo d'affichage), pour que je puisse vous répondre</label>
+          <input type="text" id="cf-contact" name="contact" placeholder="@pseudo" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="7" maxlength="1024" required></textarea>
+        </div>
+        <div class="form-field form-field-hp" aria-hidden="true">
+          <label for="cf-website">Site web</label>
+          <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer le message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
   </section>
 
 </main>
@@ -72,5 +92,6 @@
 
 <script src="../assets/theme.js?v=2" defer></script>
 <script src="../assets/music.js?v=2" defer></script>
+<script src="../assets/contact.js?v=4" defer></script>
 </body>
 </html>

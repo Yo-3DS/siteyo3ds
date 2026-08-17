@@ -4,7 +4,7 @@
 <script>try{document.documentElement.setAttribute("data-theme", localStorage.getItem("theme")||"light");}catch(e){}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home - Yo-3DS Website</title>
+<title>Contact - Yo-3DS Website</title>
 <link rel="icon" type="image/png" href="assets/images/brand/favicon.png?v=1">
 <link rel="preload" href="assets/fonts/titres.otf?v=2" as="font" type="font/otf" crossorigin>
 <link rel="preload" href="assets/fonts/base.otf?v=2" as="font" type="font/otf" crossorigin>
@@ -21,15 +21,15 @@
       <span class="brand-name"><span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span> Website</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
     </ul>
     <details class="lang-switch">
       <summary><img class="flag" src="assets/images/flags/en.png" alt="">English</summary>
       <ul class="lang-menu">
-        <li><a class="active" href="index.html"><img class="flag" src="assets/images/flags/en.png" alt="">English</a></li>
-        <li><a href="fr/index.html"><img class="flag" src="assets/images/flags/fr.png" alt="">Français</a></li>
+        <li><a class="active" href="contact.html"><img class="flag" src="assets/images/flags/en.png" alt="">English</a></li>
+        <li><a href="fr/contact.html"><img class="flag" src="assets/images/flags/fr.png" alt="">Français</a></li>
       </ul>
     </details>
     <button class="theme-toggle" type="button">Dark Mode</button>
@@ -43,22 +43,43 @@
 
 <main class="wrap">
 
-  <section class="hero" style="grid-template-columns: 1fr;">
-    <div>
-      <h1>Hi, I'm Yo-3DS!</h1>
-      <p>
-        I'm a great YO-KAI WATCH fan, and a great french localizations fan! I such
-        like these that I decided to create some myself, especially for games that
-        would never get one.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="projects.html">See my projects</a>
-      </div>
-    </div>
+  <section style="padding-top:48px;">
+    <h1>Contact me</h1>
+    <p>
+      Got a question, a suggestion, or want to help with one of my translation
+      projects? Fill out the form below and I'll get back to you as soon as I can.
+    </p>
   </section>
 
-  <section id="a-propos">
-    <!-- section "à propos" retirée pour l'instant -->
+  <section class="project-body" style="padding-top:0; grid-template-columns:1fr;">
+    <div>
+      <p>
+        To contact me, complete the informations below. When you contact me,
+        be <strong>clear</strong>, <strong>go ahead</strong> and <strong>don't omit</strong>
+        <strong>any</strong> potentially important <strong>information</strong> of your own case.
+      </p>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="cf-name">Your name / handle</label>
+          <input type="text" id="cf-name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-contact">Email or your unique Discord @username (not your display name), so I can reply</label>
+          <input type="text" id="cf-contact" name="contact" placeholder="@username" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="7" maxlength="1024" required></textarea>
+        </div>
+        <div class="form-field form-field-hp" aria-hidden="true">
+          <label for="cf-website">Website</label>
+          <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
   </section>
 
 </main>
@@ -71,5 +92,6 @@
 
 <script src="assets/theme.js?v=2" defer></script>
 <script src="assets/music.js?v=2" defer></script>
+<script src="assets/contact.js?v=4" defer></script>
 </body>
 </html>

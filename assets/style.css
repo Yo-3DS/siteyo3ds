@@ -155,6 +155,13 @@ a:focus-visible, button:focus-visible {
   flex-shrink: 0;
 }
 
+.brand-name {
+  display: inline-block;
+}
+
+.brand-yo { color: #FFCA08; }
+.brand-3ds { color: #E82428; }
+
 .brand-medal {
   width: 34px;
   height: 34px;
@@ -182,7 +189,8 @@ a:focus-visible, button:focus-visible {
 .nav-links a:hover { background: var(--bg-soft); color: var(--ink); }
 .nav-links a[aria-current="page"] { background: var(--primary); color: #fff; }
 
-.theme-toggle {
+.theme-toggle,
+.music-toggle {
   font-family: 'YW Sous-textes', sans-serif;
   font-size: 0.82rem;
   padding: 7px 14px;
@@ -194,7 +202,59 @@ a:focus-visible, button:focus-visible {
   margin-left: 10px;
   transition: border-color 0.18s ease, color 0.18s ease;
 }
-.theme-toggle:hover { border-color: var(--primary); color: var(--primary); }
+.theme-toggle:hover,
+.music-toggle:hover { border-color: var(--primary); color: var(--primary); }
+
+.music-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.music-icon {
+  position: relative;
+  width: 10px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+/* État "en pause" : triangle de lecture */
+.music-icon::before,
+.music-icon::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+.music-icon::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 5.5px solid transparent;
+  border-bottom: 5.5px solid transparent;
+  border-left: 9px solid currentColor;
+  background: transparent;
+}
+.music-icon::after {
+  display: none;
+}
+
+/* État "en lecture" : deux barres */
+.music-toggle[aria-pressed="true"] .music-icon::before {
+  border: none;
+  background: currentColor;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 11px;
+}
+.music-toggle[aria-pressed="true"] .music-icon::after {
+  display: block;
+  top: 0;
+  left: 7px;
+  width: 3px;
+  height: 11px;
+}
 
 .lang-switch {
   position: relative;
@@ -279,6 +339,9 @@ a:focus-visible, button:focus-visible {
   padding: 18px 44px;
   border: none;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
   background-image: url('images/buttons/btn-box01.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -519,6 +582,65 @@ section { padding: 56px 0; }
 .side-panel dt { font-family: 'YW Sous-textes', sans-serif; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 14px; }
 .side-panel dt:first-child { margin-top: 0; }
 .side-panel dd { margin: 4px 0 0; font-family: 'YW Base', sans-serif; }
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 560px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-family: 'YW Sous-textes', sans-serif;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: 'YW Base', sans-serif;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--bg-soft);
+  background: var(--surface);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-field-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  font-family: 'YW Sous-textes', sans-serif;
+  font-size: 0.9rem;
+  margin: 0;
+  min-height: 1.4em;
+}
+.form-status.is-success { color: var(--mint); }
+.form-status.is-error { color: var(--red); }
+
+.contact-form .btn {
+  align-self: flex-start;
+}
 
 /* ---------- Screenshot gallery (thumbnails + lightbox) ---------- */
 .gallery {
