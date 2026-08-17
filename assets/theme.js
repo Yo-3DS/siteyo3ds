@@ -4,7 +4,7 @@
 
   const isFrench = document.documentElement.lang === 'fr';
   const labels = isFrench
-    ? { light: 'Thème sombre', dark: 'Thème clair' }
+    ? { light: 'Mode sombre', dark: 'Mode clair' }
     : { light: 'Dark Mode', dark: 'Light Mode' };
 
   function label(theme) {
