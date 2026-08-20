@@ -20,6 +20,8 @@
 <img alt="" class="brand-icon" src="../assets/images/brand/icon.png"/>
 <span class="brand-name">Site de <span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span></span>
 </a>
+<button aria-controls="nav-collapse" aria-expanded="false" aria-label="Menu" class="nav-toggle" type="button"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
+<div class="nav-collapse" id="nav-collapse">
 <ul class="nav-links">
 <li><a href="index.html">Accueil</a></li>
 <li><a aria-current="page" href="projets.html">Projets</a></li>
@@ -34,6 +36,7 @@
 </details>
 <button class="theme-toggle" type="button">Thème sombre</button>
 <button aria-pressed="false" class="music-toggle" title="Flower Man (sung by Yo-3DS)" type="button"><span aria-hidden="true" class="music-icon"></span><span class="music-label">Musique</span></button>
+</div>
 <audio id="site-audio" loop="" preload="none">
 <source src="../assets/audio/flower-man.mp3?v=1" type="audio/mpeg"/>
 <source src="../assets/audio/flower-man.ogg?v=1" type="audio/ogg"/>
@@ -99,7 +102,24 @@
         <a class="text-link" href="https://github.com/Yo-3DS/YW1MFRA">GitHub du projet</a>
         et suivez les instructions.
       </p>
-<!-- Emplacement prévu pour des captures d'écran du projet -->
+<h2>Captures d'écran</h2>
+<div class="gallery">
+<figure>
+<img alt="Intro de combat de Chatana" loading="lazy" src="../assets/images/yw1-smartphone/yw1-01-chatana.png"/>
+</figure>
+<figure>
+<img alt="Écran de sélection de journal" loading="lazy" src="../assets/images/yw1-smartphone/yw1-02-journal.png"/>
+</figure>
+<figure>
+<img alt="Écran des paramètres" loading="lazy" src="../assets/images/yw1-smartphone/yw1-03-parametres.png"/>
+</figure>
+<figure>
+<img alt="Liste des quêtes" loading="lazy" src="../assets/images/yw1-smartphone/yw1-04-quetes.png"/>
+</figure>
+<figure>
+<img alt="Écran de combat" loading="lazy" src="../assets/images/yw1-smartphone/yw1-05-combat.png"/>
+</figure>
+</div>
 </div>
 <aside class="side-panel">
 <h3>À propos</h3>
@@ -117,6 +137,8 @@
 <small>© 2026 — Site de <span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span></small>
 </div>
 </footer>
+<script defer="" src="../assets/gallery.js?v=2"></script>
+<script defer="" src="../assets/nav.js?v=1"></script>
 <script defer="" src="../assets/theme.js?v=2"></script>
 <script defer="" src="../assets/music.js?v=2"></script>
 </body>
